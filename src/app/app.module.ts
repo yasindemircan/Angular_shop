@@ -1,14 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { CategoryComponent } from './category/category.component';
+import { ProductComponent } from './product/product.component';
+import { ProductFilterPipe } from './product/product-filter.pipe';
+import { from } from 'rxjs';
+import {HttpClientModule} from '@angular/common/http';
+import {AppRoutingModule} from './app-routing/app-routing.module';
+import { ProductAddForms1Component } from './product/product-add-forms1/product-add-forms1.component';
+import { ProductAddForms2Component } from './product/product-add-forms2/product-add-forms2.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    CategoryComponent,
+    ProductComponent,
+    ProductFilterPipe,
+    ProductAddForms1Component,
+    ProductAddForms2Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
